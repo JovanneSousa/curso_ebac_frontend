@@ -21,13 +21,18 @@ $(document).ready(function(){
             },
             adress:{
                 required: true
+            },
+            email: {
+                required: true,
+                email: true
             }
         },
         messages:{
             nome: 'Por favor, insira seu nome',
             telefone: 'Por favor, insira seu telefone',
             cpf: 'Por favor, insira o seu CPF',
-            adress: 'Por favor, insira o seu endereço'
+            adress: 'Por favor, insira o seu endereço',
+            email: 'Insira um email válido'
         },
         submitHandler: function(form){
             if(form){
@@ -38,7 +43,13 @@ $(document).ready(function(){
                 if(!validaNomeCompleto()){
                     alert('Insira seu nome completo')
                 }else{
-                    alert('Cadastro realizado')
+                    alert('Cadastro realizado com sucesso')
+                    $('#nome').val('');
+                    $('#email').val('');
+                    $('#telefone').val('');
+                    $('#cpf').val('');
+                    $('#adress').val('');
+                    $('#cep').val('');
                 }
             }
         },
