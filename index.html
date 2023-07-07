@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sousa Informática</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>
+                Informática Sousa
+                <img src="./img/computador-desktop.png" alt="icone minimalista de um coputador de mesa">
+            </h1>
+            <form>
+                <input type="search" placeholder="Procurar um produto">
+                <button type="submit">Buscar</button>
+            </form>  
+        </div>
+        <nav class="container">
+            <ul>
+                <li><a href="#" id="menu-about">Sobre a loja</a></li>
+                <li><a href="#produto">Produtos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="menu">
+            <div class="container-grid">
+                <img src="./img/loja,jpg.jpg" alt="Loja de informática">
+                <article class="about">
+                    <h2>Sobre nós</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum magni amet quo adipisci provident beatae harum sunt nam mollitia pariatur, quaerat temporibus eum corporis fugiat deserunt dolorem exercitationem eligendi! Culpa.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum magni amet quo adipisci provident beatae harum sunt nam mollitia pariatur, quaerat temporibus eum corporis fugiat deserunt dolorem exercitationem eligendi! Culpa.</p>
+                </article>
+            </div>  
+        </div>
+        <div class="prod" id="produto">
+            <h2>produtos</h2>
+            <div class="produto">
+                <section>
+                    <img src="./img/gabinete 1.jpg" alt="gabinete gamer">
+                    <p>Computador gamer</p>
+                    <span><p>R$ 5.000,00</p></span>
+                    <button type="submit">Adicionar ao carrinho</button>
+                </section>
+                <section>
+                    <img src="./img/gabinete 1.jpg" alt="gabinete gamer">
+                    <p>Computador gamer</p>
+                    <span><p>R$ 5.000,00</p></span>
+                    <button type="submit">Adicionar ao carrinho</button>
+                </section>
+                <section>
+                    <img src="./img/gabinete 1.jpg" alt="gabinete gamer">
+                    <p>Computador gamer</p>
+                    <span><p>R$ 5.000,00</p></span>
+                    <button type="submit">Adicionar ao carrinho</button>
+                </section>
+                <section>
+                    <img src="./img/gabinete 1.jpg" alt="gabinete gamer">
+                    <p>Computador gamer</p>
+                    <span><p>R$ 5.000,00</p></span>
+                    <button type="submit">Adicionar ao carrinho</button>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('#menu-about').click(function(){
+                $('.menu').slideToggle();
+            })
+        })
+    </script>
+</body>
+</html>
