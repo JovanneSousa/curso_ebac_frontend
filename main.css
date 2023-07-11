@@ -25,7 +25,7 @@ body{
     color: #ff4655;
 }
 .carousel-item{
-    height: 30vh;
+    height: 50vh;
 }
 .carousel-item img{
     margin-top: -5%;
@@ -93,7 +93,7 @@ footer{
     margin: 0 auto;
 }
 footer p{
-    margin: 20px 20px 0px 0px;
+    margin: 20px 0px 0px;
 }
 .img-val{
     width: 30%;
@@ -145,6 +145,7 @@ footer p{
     font-size: 16px;
     padding-bottom: 0;
     text-align: center;
+    padding: 16px;
     }
     .rodape{
         display: block;
@@ -152,6 +153,9 @@ footer p{
     }
     .img-val{
         width: 70%;
-        margin-bottom: 40px;
+        margin-bottom: 0;
+    }
+    footer p {
+        margin-top: 10px;
     }
 }
