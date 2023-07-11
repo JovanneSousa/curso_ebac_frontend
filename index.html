@@ -89,6 +89,26 @@
             background-color: #ff4655;
             color: white;
             height: 40vh;
+            font-size: 16px;
+            padding: 16px;
+        }
+        .rodape{
+            display: flex;
+            align-items: end;
+            justify-content: end;
+            max-width: 1024px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        footer p{
+            margin: 20px 20px 0px 0px;
+        }
+        .img-val{
+            width: 30%;
+            margin: 0 auto;
+        }
+        .img-val img{
+            width: 100%;
         }
         @media screen and (max-width: 767px){
             .container-grid{
@@ -100,9 +120,44 @@
             .container{
                 padding: 0;
             }
-        
-        
+            footer{
+                font-size: 15px;
+                text-align: center;
+            }
+            .rodape{
+                display: block; 
+            }
+            .img-val{
+                width: 70%;
+                margin-bottom: 0;
+            }
+        }    
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            .container-grid{
+                grid-template-columns: repeat(2, 49%);
+            }
+            .card img{
+                height: 50vh;
+            }
+            .card{
+                margin-bottom: 20px;
+            }
+            footer{
+            height: 40vh;
+            font-size: 16px;
+            padding-bottom: 0;
+            text-align: center;
+            }
+            .rodape{
+                display: block;
+                
+            }
+            .img-val{
+                width: 70%;
+                margin-bottom: 40px;
+            }
         }
+        
     </style>
 </head>
 <body>
@@ -472,7 +527,17 @@
             </div>
         </section>
     </main>
-    
+    <footer>
+        <div class="img-val">
+            <a href="http://www.playvalorant.com" target="_blank" title="Ir para o site do valorant">
+                <img src="./img/logo valorant.png" alt="logo do valorant">
+            </a>
+        </div>
+        <div class="rodape">
+            <p>imagens e textos retirados da página oficial da riot games, usados afim de praticar o bootstrap</p>
+            &copy; - Jovanne Sousa - <time>11/07/2023</time>
+        </div>
+    </footer>
     <script src="./lib/bootstrap.bundle.min.js"></script>
 </body>
 </html>
