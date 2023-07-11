@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant - Agentes</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <style>
+        header{
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: white;
+            z-index: 1;
+            border-bottom: 1px solid #ff4655;
+        }
+        #carousel-id{
+            border-bottom: 1px solid #ff4655;
+        }
+        h1{
+            font-size: 3em;
+        }
+        h2{
+            font-size: 2.5em;
+            padding: 16px;
+            border-bottom: #ff4655 1px solid;
+        }
+        h3{
+            margin: 8px;
+            font-size: 2em;
+        }
+        body{
+            color: #ff4655;
+        }
+        .carousel-item{
+            height: 30vh;
+        }
+        .carousel-item img{
+            margin-top: -5%;
+        }
+        .navbar-nav .nav-link.active{
+            color: white;
+        }
+        .nav-link{
+            text-align: center;
+        }
+        .agentes{
+            padding-top: 20px;
+        }
+        .container-grid{
+            max-width: 1366px;
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 33%);
+            padding: 32px 0;
+            border-bottom: #ff4655 1px solid;
+        }
+        .card {
+            margin: 0 2.5%;
+            border: 1px solid #ff4655;
+        }
+        .modal-body{
+            padding: 2px;
+        }
+        .modal-body img{
+            width: 100%;
+        }
+        .card-header,
+        .modal-header{
+            background-color: #ff4655;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            padding: 4px 16px;
+            border-bottom: 1px solid #ff4655;
+        }
+        .modal-header{
+            justify-content: center;
+        }
+        .card img{
+            height: 75vh;
+        }
+        .navbar-nav .nav-link.active{
+            background-color: #ff4655;
+        }
+        footer{
+            margin-top: 50px;
+            background-color: #ff4655;
+            color: white;
+            height: 40vh;
+        }
+        @media screen and (max-width: 767px){
+            .container-grid{
+                display: block;
+            }
+            .card{
+                margin-bottom: 20px;
+            }
+            .container{
+                padding: 0;
+            }
+        
+        
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>Valorant</h1>
+                <button type="button" class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav nav-pills navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  href="#iniciadores">Iniciadores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#duelistas">Duelistas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#controladores">Controladores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sentinelas">Sentinelas</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main data-bs-spy="scroll" data-bs-target="#header">
+        <div  id="carousel-id"  class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div title="Visualizar o mapa" data-bs-interval="3000" class="carousel-item active">
+                    <img class="d-block w-100"  src="./img/lotus.jpg" alt="Mapa lotus do jogo Valorant">
+                    <div class="carousel-caption">
+                        <h3>Lótus</h3>
+                    </div>
+                </div>
+                <div title="Visualizar o mapa" data-bs-interval="3000" class="carousel-item">
+                    <img class="d-block w-100"  src="./img/breeze.jpg" alt="Mapa breeze do jogo Valorant">
+                    <div class="carousel-caption">
+                        <h3>Breeze</h3>
+                    </div>
+                </div>
+                <div title="Visualizar o mapa" data-bs-interval="3000" class="carousel-item">
+                    <img class="d-block w-100"  src="./img/pearl.jpg" alt="Mapa peal do jogo Valorant">
+                    <div class="carousel-caption">
+                        <h3>Pearl</h3>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-id" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-id" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" class="active" data-bs-target="#carousel-id" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-id" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-id" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+        <section class="container">
+            <h2>Agentes</h2>
+            
+            <div class="agentes" id="iniciadores">
+                <h3>Iniciadores</h3>
+                <div class="container-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            Sova
+                        </div>
+                        <img src="./img/agentes/sova.png" alt="agente sova do valorant">
+                        <div class="card-body">
+                            <p>Nascido sob o eterno inverno das tundras russas, Sova rastreia, encontra e elimina inimigos com eficiência e precisão implacáveis. Seu arco personalizado e suas habilidades inigualáveis de reconhecimento garantem que nenhuma presa escape.</p>
+                            <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-sova">Ver sova</a>
+                            <div class="modal modal-xl"  data-bs-backdrop="static" id="modal-sova">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            Sova
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="./img/agentes/modal-agentes/sova.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Fade
+                        </div>
+                        <img src="./img/agentes/fade.png" alt="agente fade do valorant">
+                        <div class="card-body">
+                            <p>Fade, uma caçadora de recompensas turca, usa o poder dos pesadelos para capturar os segredos dos inimigos. Personificando o próprio terror, ela persegue os alvos e revela seus medos mais profundos para, depois, destruí-los na escuridão.</p>
+                            <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-fade">Ver Fade</a>
+                            <div class="modal modal-xl"  data-bs-backdrop="static" id="modal-fade">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            Fade
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="./img/agentes/modal-agentes/fade.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Kay/o
+                        </div>
+                        <img src="./img/agentes/kayo.png" alt="agente kayo do valorant">
+                        <div class="card-body">
+                            <p>KAY/O é uma máquina de guerra construída com um único propósito: neutralizar Radiantes. Ele é capaz de Suprimir habilidades inimigas, anulando a capacidade de contra-ataque dos adversários e dando a si e a seus aliados uma vantagem essencial em combate.</p>
+                            <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-kayo">Ver Kay/o</a>
+                            <div class="modal modal-xl"  data-bs-backdrop="static" id="modal-kayo">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            Kay/o
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="./img/agentes/modal-agentes/kayo.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="agentes" id="duelistas">
+                <h3>Duelistas</h3>
+                <div class="container-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            Jett
+                        </div>
+                        <img src="./img/agentes/jett.png" alt="agente jett do valorant">
+                        <div class="card-body">
+                            <p>Representando a Coreia do Sul, sua terra natal, Jett tem um estilo de luta ágil e evasivo que permite que ela assuma riscos como ninguém. Ela corre em meio a qualquer confronto, cortando os inimigos antes mesmo que eles percebam quem ou o que os atingiu.</p>
+                            <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-jett">Ver Jett</a>
+                            <div class="modal modal-xl"  data-bs-backdrop="static" id="modal-jett">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            Jett
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="./img/agentes/modal-agentes/jett.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Phoenix
+                        </div>
+                        <img src="./img/agentes/phoenix.png" alt="agente phoenix do valorant">
+                        <div class="card-body">
+                            <p>Chegando com tudo diretamente do Reino Unido, o poder estelar de Phoenix reluz em seu estilo de luta, incendiando o campo de batalha com luz e estilo. Tendo ajuda ou não, ele entra na luta como e quando achar que deve.</p>
+                            <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-phoenix">Ver Phoenix</a>
+                            <div class="modal modal-xl"  data-bs-backdrop="static" id="modal-phoenix">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            Phoenix
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="./img/agentes/modal-agentes/phoenix.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Neon
+                        </div>
+                        <img src="./img/agentes/neon.png" alt="agente neon do valorant">
+                        <div class="card-body">
+                            <p>Neon, nossa Agente filipina, avança em velocidades incríveis, descarregando surtos de radiância bioelétrica tão rapidamente quanto seu corpo consegue gerá-los. Ela corre à frente para pegar os inimigos de surpresa, abatendo-os mais rápido do que um raio.</p>
+                            <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-neon">Ver Neon</a>
+                            <div class="modal modal-xl"  data-bs-backdrop="static" id="modal-neon">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            Neon
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="./img/agentes/modal-agentes/neon.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="agentes" id="controladores">
+                <h3>Controladores</h3>
+                <div class="container-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            Astra
+                        </div>
+                        <img src="./img/agentes/astra.png" alt="agente astra do valorant">
+                        <div class="card-body">
+                            <p>Astra, a Agente ganense, utiliza energias cósmicas para moldar o campo de batalha a seu bel-prazer. Com total domínio da sua forma astral e um talento estratégico nato, ela está sempre anos-luz à frente dos inimigos.</p>
+                            <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-astra">Ver Astra</a>
+                            <div class="modal modal-xl"  data-bs-backdrop="static" id="modal-astra">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            Astra
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="./img/agentes/modal-agentes/astra.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Omen
+                        </div>
+                        <img src="./img/agentes/omen.png" alt="agente omen do valorant">
+                        <div class="card-body">
+                            <p>Omen, uma lembrança fantasmagórica, caça nas sombras. Ele cega os inimigos, teleporta-se pelo campo e deixa a paranoia assumir o controle enquanto o adversário tenta descobrir de onde virá seu próximo ataque.</p>
+                            <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-omen">Ver Omen</a>
+                            <div class="modal modal-xl"  data-bs-backdrop="static" id="modal-omen">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            Omen
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="./img/agentes/modal-agentes/omen.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Viper
+                        </div>
+                        <img src="./img/agentes/viper.png" alt="agente viper do valorant">
+                        <div class="card-body">
+                            <p>Viper, a química dos Estados Unidos, emprega uma variedade de dispositivos químicos venenosos para controlar o campo de batalha e prejudicar a visão do inimigo. Se as toxinas não matarem a presa, seus jogos mentais certamente o farão.</p>
+                            <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-viper">Ver Viper</a>
+                            <div class="modal modal-xl"  data-bs-backdrop="static" id="modal-viper">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            Viper
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="./img/agentes/modal-agentes/viper.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="agentes" id="sentinelas">
+                <h3>Sentinelas</h3>
+                <div class="container-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            Deadlock
+                        </div>
+                        <img src="./img/agentes/deadlock.png" alt="agente deadlock do valorant">
+                        <div class="card-body">
+                            <p>A agente norueguesa Deadlock posiciona uma gama de nanofios de alta tecnologia para proteger o campo de batalha até mesmo do ataque mais letal. Ninguém escapa do seu olhar vigilante. Ninguém sobrevive à sua ferocidade implacável.</p>
+                            <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-deadlock">Ver Deadlock</a>
+                            <div class="modal modal-xl"  data-bs-backdrop="static" id="modal-deadlock">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            Deadlock
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="./img/agentes/modal-agentes/deadlock.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Killjoy
+                        </div>
+                        <img src="./img/agentes/killjoy.png" alt="agente killjoy do valorant">
+                        <div class="card-body">
+                            <p>Killjoy, uma alemã genial, defende posições-chave no campo de batalha facilmente com seu arsenal de invenções. Se o dano causado por seu equipamento não der cabo dos inimigos, os efeitos negativos de seus queridos robôs darão conta do recado.</p>
+                            <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-killjoy">Ver Killjoy</a>
+                            <div class="modal modal-xl"  data-bs-backdrop="static" id="modal-killjoy">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            Killjoy
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="./img/agentes/modal-agentes/killjoy.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Chamber
+                        </div>
+                        <img src="./img/agentes/chamber.png" alt="agente chamber do valorant">
+                        <div class="card-body">
+                            <p>Bem-vestido e armado até os dentes, o criador de armas francês Chamber coloca os inimigos para correr com precisão mortal. Use e abuse do arsenal personalizado dele para segurar posições e abater inimigos de longe, criando a defesa perfeita para qualquer plano.</p>
+                            <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-chamber">Ver Chamber</a>
+                            <div class="modal modal-xl"  data-bs-backdrop="static" id="modal-chamber">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            Chamber
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="./img/agentes/modal-agentes/chamber.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>
